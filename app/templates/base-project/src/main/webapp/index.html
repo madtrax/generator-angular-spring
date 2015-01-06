@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+  	<!-- 
+  			~~~<*)(((((((()><<<
+  	 -->
+    <script src="js/lib.js"></script>
+    <script src="js/app.js"></script>
+
+    <link rel="stylesheet" href="style/lib.css">
+    <link rel="stylesheet" href="style/app.css">
+
+    <title><%= properties.projectName %> - <%= properties.projectAuthor %></title>
+  </head>
+  <body>
+    <div id="siteWrapper">
+  		<div ng-include="'templates/header.html'"></div>
+  		<ng-view></ng-view>
+    </div>
+   	<div style="padding-bottom:50px;"></div>
+  </body>
+</html>

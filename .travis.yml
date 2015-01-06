@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - '0.10'
+before_script:
+  - shopt -s dotglob  
+  - git config --global user.email "travis@dardenne.fr"
+  - git config --global user.name "Travis CI bot - (Mathieu Dardenne)"  
+after_success:
+  - cd test
+  - git clone https://${GH_REF}
+  - cd sample-angular-spring
+  - cp -R .git ../ 
+  - git rm -r * --ignore-unmatch
+  - rm -rf * 
+  - mv ../.git/ . 
+  - cp -R ../temp/* .  
+  - git add --all . && git status && git commit -a -m 'Lastest test built'
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master > /dev/null 2>&1

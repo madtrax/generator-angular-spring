@@ -1,0 +1,45 @@
+{
+  "name": "generator-angular-spring",
+  "version": "0.0.2",
+  "description": "(Java Spring MVC + AngularJS)/Tomcat Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/madtrax/generator-angular-spring"
+  },
+  "author": "Mathieu DARDENNE <mathieu@dardenne.fr> (https://github.com/madtrax/generator-angular-spring)",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "java",
+    "spring",
+    "javascript",
+    "angular"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.18.0",
+    "chalk": "^0.5.0",
+    "yosay": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/madtrax/generator-angular-spring/issues"
+  },
+  "homepage": "https://github.com/madtrax/generator-angular-spring",
+  "directories": {
+    "test": "test"
+  }
+}
