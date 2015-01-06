@@ -35,7 +35,7 @@ yo javastar
 
 ### Example of generated application [![Build Status](https://travis-ci.org/madtrax/sample-angular-spring.svg?branch=master)](https://travis-ci.org/madtrax/sample-angular-spring)
 
-You can find a sample of generated application [here](https://github.com/madtrax/samepl-angular-spring)
+You can find a sample of generated application [here](https://github.com/madtrax/sample-angular-spring)
 
 ### Contributions are welcome
 
