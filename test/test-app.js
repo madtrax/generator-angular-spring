@@ -44,6 +44,7 @@ describe('angular-spring generator', function () {
       ];
 
       var expected = defaultFiles.concat(expectedAdditionalFiles);
+      
       helpers
         .run(path.join( __dirname, '../app'))
         .inDir(path.join(__dirname, 'temp'))
