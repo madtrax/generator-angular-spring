@@ -1,5 +1,5 @@
-# angular-spring generator [![Build Status](https://secure.travis-ci.org/madtrax/generator-angular-spring.png?branch=master)](https://travis-ci.org/madtrax/generator-angular-spring) [![Dependency Status](https://david-dm.org/madtrax/generator-angular-spring.svg)](https://david-dm.org/madtrax/generator-angular-spring.svg)
-
+# angular-spring generator 
+[![Build Status](https://secure.travis-ci.org/madtrax/generator-angular-spring.png?branch=master)](https://travis-ci.org/madtrax/generator-angular-spring) [![Dependency Status](https://david-dm.org/madtrax/generator-angular-spring.svg)](https://david-dm.org/madtrax/generator-angular-spring.svg)
 ## Getting Started
 
 ### What is angular-spring generator?
@@ -19,8 +19,8 @@ If you do not have Yeoman on your computer, please install it first using the co
 npm install -g yo
 ```
 
-### Use angular-spring generator
-
+## Use angular-spring generator
+### Install
 To install the generator you can use npm
 
 ```bash
@@ -33,18 +33,24 @@ You can also clone the project and link it to your local npm
 git clone https://github.com/madtrax/generator-angular-spring.git && cd ./generator-angular-spring && sudo npm link
 ```
 
-Finally, initiate the generator:
+### Launch
+Finally, launch the generator:
 
 ```bash
 yo angular-spring
 ```
 
-### Generated application [![Build Status](https://travis-ci.org/madtrax/sample-angular-spring.svg?branch=master)](https://travis-ci.org/madtrax/sample-angular-spring)
-
+## Generated application [![Build Status](https://travis-ci.org/madtrax/sample-angular-spring.svg?branch=master)](https://travis-ci.org/madtrax/sample-angular-spring)
+### Start application
 Once you ran the generator, execute the following commands to compile and run the web application.
 
+Install dependencies:
 ```bash
-npm install && bower install && grunt && mvn tomcat7:run
+npm install && bower install
+```
+Start:
+```bash
+grunt && mvn tomcat7:run
 ```
 
 Once everything is done you can open you web browser: http://localhost:8080/your-project-name/
@@ -52,6 +58,8 @@ Once everything is done you can open you web browser: http://localhost:8080/your
 ![Image](http://imagizer.imageshack.us/a/img537/8286/EBBZOM.png)
 
 You can find a sample of generated application [here](https://github.com/madtrax/sample-angular-spring). 
+
+### Folder structure
 
 The application folder structure before running grunt and bower should be:
 
@@ -104,7 +112,7 @@ The application folder structure before running grunt and bower should be:
 22 directories, 22 files
 ```
 
-### Contributions are welcome
+## Contributions are welcome
 
 There is many improvements that can be done for this project, feel free to contribute.
 
