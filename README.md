@@ -4,11 +4,11 @@
 
 ### What is angular-spring generator?
 
-I realized I usually spend more time removing all the unecessary libraries and extra stuff when I use existing generators, so here is a lightweight and clean generator to bootstrap a project which doesn't require lunar load balancing, 64 clustered oracle instances and 782 hadoop nodes.
+I realized I usually spend more time removing all the unecessary libraries and extra stuff when I use existing generators, so here is a lightweight and clean generator to bootstrap a project which doesn't require lunar load balancing, 64 clustered oracle instances and 782 hadoop nodes (you can add that yourself afterwards!).
 
-angular-spring generator is a [Yeoman](http://yeoman.io) generator to create a solid base project using Java Spring MVC & AngularJS and can be quickly deployed on Tomcat. The following tools will be included [Maven](http://maven.apache.org), [Grunt](http://gruntjs.com) & [Bower](http://bower.io).
+angular-spring generator is a [Yeoman](http://yeoman.io) generator which create a solid base project using Java Spring MVC & AngularJS and can be quickly deployed on Tomcat. The following tools will be included [Maven](http://maven.apache.org), [Grunt](http://gruntjs.com) & [Bower](http://bower.io).
 
-You can optionnaly includes additional features like: [FontAwesome](http://fortawesome.github.io/Font-Awesome/) & [AngularStrap](http://mgcrea.github.io/angular-strap/).
+IF YOU WISH, the generator can add extra stuff like: [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [AngularStrap](http://mgcrea.github.io/angular-strap/).
 (@TODO: [Compass](http://compass-style.org/), WebSocket)
 
 The AngularJS style is based on [@john_papa style guide](https://github.com/johnpapa/angularjs-styleguide)
@@ -19,18 +19,24 @@ If you do not have Yeoman on your computer, please install it first using the co
 npm install -g yo
 ```
 
-### Use angular-spring Generator
+### Use angular-spring generator
 
-To install generator-angular-spring from npm, run:
+To install the generator you can use npm
 
 ```bash
 npm install -g generator-angular-spring
 ```
 
+You can also clone the project and link it to your local npm
+
+```bash
+git clone https://github.com/madtrax/generator-angular-spring.git && cd ./generator-angular-spring && sudo npm link
+```
+
 Finally, initiate the generator:
 
 ```bash
-yo javastar
+yo angular-spring
 ```
 
 ### Generated application [![Build Status](https://travis-ci.org/madtrax/sample-angular-spring.svg?branch=master)](https://travis-ci.org/madtrax/sample-angular-spring)
@@ -102,12 +108,6 @@ The application folder structure before running grunt and bower should be:
 
 There is many improvements that can be done for this project, feel free to contribute.
 
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
-
 ## License
 
-MIT
+Apache 2.0
