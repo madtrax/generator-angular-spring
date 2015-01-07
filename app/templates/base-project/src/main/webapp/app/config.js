@@ -10,7 +10,9 @@
 		
 		var service 		= {};
 
-		service.initConfig	= function() {};
+		service.initConfig	= function() {
+			return $http.get('config');
+		};
 		
 		return service;
 	}

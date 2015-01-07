@@ -41,7 +41,6 @@
 		<hibernate.version>4.2.1.Final</hibernate.version>
 
 		<!-- Logging -->
-		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
 
 		<!-- Test -->
@@ -119,22 +118,16 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- Logging with SLF4J & LogBack -->
+		<!-- Logging with SLF4J -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.7</version>
 			<scope>compile</scope>
 		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.1.2</version>
-			<scope>runtime</scope>
-		</dependency>
 
 		<!-- Hibernate -->
-		<dependency>
+		<!-- dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
@@ -143,7 +136,7 @@
 		  <groupId>com.fasterxml.jackson.datatype</groupId>
 		  <artifactId>jackson-datatype-hibernate4</artifactId>
 		  <version>2.2.3</version>
-		</dependency> 
+		</dependency --> 
 
 		<!-- Test Artifacts -->
 		<dependency>
@@ -160,11 +153,11 @@
 		</dependency>	
 	    
 	    <!-- Exec cmd -->
-		<dependency>
+		<!-- dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-exec</artifactId>
 			<version>1.2</version>
-		</dependency>	    
+		</dependency -->
 
 		<!-- Google GSON -->
 		<dependency>
@@ -173,39 +166,31 @@
 			<version>2.2.4</version>
 		</dependency>
 
-		<dependency>
+		<!-- MySQL -->
+		<!-- dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.29</version>
 		</dependency>
 		
-		<!-- MySQL -->
 		<dependency>
 		  <groupId>commons-dbcp</groupId>
 		  <artifactId>commons-dbcp</artifactId>
 		  <version>1.4</version>
-		</dependency>
-
+		</dependency -->
 
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.4</version>
 		</dependency>		
-		
-		<!-- SQL Script execution -->
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId>
-			<version>3.0.1</version>
-		</dependency>
-		
+
 		<!-- Templating -->
-		<dependency>
+		<!-- dependency>
 		  <groupId>org.freemarker</groupId>
 		  <artifactId>freemarker</artifactId>
 		  <version>2.3.21</version>
-		</dependency>
+		</dependency -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -268,11 +253,11 @@
 		</dependency>
 
 		<!-- SFTP Connection via JSch -->
-		<dependency>
+		<!-- dependency>
 			<groupId>com.jcraft</groupId>
 			<artifactId>jsch</artifactId>
 			<version>0.1.51</version>
-		</dependency>
+		</dependency -->
 
 	</dependencies>	
 

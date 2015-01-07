@@ -19,16 +19,15 @@ public class ApplicationController {
 
 	private Logger logger = Logger.getLogger(getClass().getName());
 
-	public ApplicationController() {
-		
-	}
+	public ApplicationController() { }
 
 	@RequestMapping("/config")
 	public @ResponseBody Map<String,String> config() {
 		Map<String, String> params = new HashMap<String, String>();
 
-		params.put("projectName", 	applicationService.getProjectName());
+		params.put("projectName", applicationService.getProjectName());
 		params.put("projectAuthor", applicationService.getProjectAuthor());
+		params.put("projectWebsite", applicationService.getProjectWebsite());
 
 		logger.info("Querying /config");
 

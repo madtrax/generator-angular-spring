@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     bower_concat: {
       all: {
         dest: '<%= folders.webapp.build %>js/lib.js',
-        cssDest: '<%= folders.webapp.build %>js/lib.css',
+        cssDest: '<%= folders.webapp.build %>style/lib.css',
         bowerOptions: {
           relative: false
         }
@@ -66,7 +66,13 @@ module.exports = function(grunt) {
         cwd: '<%= folders.webapp.root %>',
         src: ['index.html', 'templates/**/*.html'],
         dest: '<%= folders.webapp.build %>'
-      }
+      },
+      fonts: {
+        expand: true,
+        flatten: true,
+        src: [ 'bower_components/components-font-awesome/fonts/**/*'],
+        dest: '<%= folders.webapp.build %>/fonts/'
+      }      
     },
 
     uglify: {
@@ -110,7 +116,7 @@ module.exports = function(grunt) {
         tasks: ['concat:js']
       },
       templates: {
-        files: '<%= copy.templates.src %>',
+        files: ['<%= folders.webapp.root %>/index.html', '<%= folders.webapp.root %>templates/**/*.html'],
         tasks: [ 'copy:templates' ]
       },
       css: {

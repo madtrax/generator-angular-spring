@@ -27,7 +27,9 @@ module.exports = yeoman.generators.Base.extend({
                 return 'The package name you have provided is not a valid Java package name.'; 
             },
             default: 'com.mycompany.myapp'
-      }
+      },
+      { type: 'confirm', name: 'useAngularStrap', message: 'Would you like to use AngularStrap (Bootsrap for AngularJS)?', default: false},
+      { type: 'confirm', name: 'useFontAwesome', message: 'Would you like to use FontAwesome (Icons font)?', default: false}
     ];
 
     this.prompt(prompts, function (props) {
@@ -37,7 +39,6 @@ module.exports = yeoman.generators.Base.extend({
       done();
     }.bind(this));
   },
-
 
   writing: {
 
@@ -69,16 +70,14 @@ module.exports = yeoman.generators.Base.extend({
       this.template(baseProjectPath + 'src/main/webapp/config/config.properties', 'src/main/webapp/config/config.properties', this, underscoreParams);
       this.template(baseProjectPath + 'src/main/resources/spring/application-config.xml', 'src/main/resources/spring/application-config.xml', this, underscoreParams);
       this.template(baseProjectPath + 'src/main/resources/spring/mvc-config.xml', 'src/main/resources/spring/mvc-config.xml', this, underscoreParams);
+      this.template(baseProjectPath + 'src/main/resources/log4j2.xml', 'src/main/resources/log4j2.xml', this, underscoreParams);
 
       this.template(javaSrcPath + 'package/controller/ApplicationController.java', javaPath + 'controller/ApplicationController.java', this, underscoreParams);
       this.template(javaSrcPath + 'package/service/ApplicationService.java', javaPath + 'service/ApplicationService.java', this, underscoreParams);
-      this.template(javaSrcPath + 'package/utils/JSONObjectMapperLazy.java', javaPath + 'utils/JSONObjectMapperLazy.java', this, underscoreParams);
 
     },
 
-    projectfiles: function () {
-
-    }
+    projectfiles: function () { }
   },
 
   install: function () {

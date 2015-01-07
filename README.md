@@ -1,4 +1,5 @@
-# angular-spring generator [![Build Status](https://secure.travis-ci.org/madtrax/generator-angular-spring.png?branch=master)](https://travis-ci.org/madtrax/generator-angular-spring)
+# angular-spring generator [![Build Status](https://secure.travis-ci.org/madtrax/generator-angular-spring.png?branch=master)](https://travis-ci.org/madtrax/generator-angular-spring) [![Dependency Status](https://david-dm.org/madtrax/generator-angular-spring
+.svg)]
 
 ## Getting Started
 
@@ -8,8 +9,8 @@ I realized I usually spend more time removing all the unecessary libraries and e
 
 angular-spring generator is a [Yeoman](http://yeoman.io) generator to create a solid base project using Java Spring MVC & AngularJS and can be quickly deployed on Tomcat. The following tools will be included [Maven](http://maven.apache.org), [Grunt](http://gruntjs.com) & [Bower](http://bower.io).
 
-@TODO:
-You can optionnaly includes additional libraries and frameworks using this generator such as [Compass](http://compass-style.org/), WebSocket, [FontAwesome](http://fortawesome.github.io/Font-Awesome/) & [AngularStrap](http://mgcrea.github.io/angular-strap/).
+You can optionnaly includes additional features like: [FontAwesome](http://fortawesome.github.io/Font-Awesome/) & [AngularStrap](http://mgcrea.github.io/angular-strap/).
+(@TODO: [Compass](http://compass-style.org/), WebSocket)
 
 The AngularJS style is based on [@john_papa style guide](https://github.com/johnpapa/angularjs-styleguide)
 
@@ -36,6 +37,55 @@ yo javastar
 ### Example of generated application [![Build Status](https://travis-ci.org/madtrax/sample-angular-spring.svg?branch=master)](https://travis-ci.org/madtrax/sample-angular-spring)
 
 You can find a sample of generated application [here](https://github.com/madtrax/sample-angular-spring)
+
+The application folder structure should be:
+
+```bash
+├── Gruntfile.js
+├── README.md
+├── bower.json
+├── package.json
+├── pom.xml
+└── src
+    └── main
+        ├── java
+        │   └── com
+        │       └── mycompany
+        │           └── myapp
+        │               ├── controller
+        │               │   └── ApplicationController.java
+        │               ├── service
+        │               │   └── ApplicationService.java
+        │               └── utils
+        │                   └── JSONObjectMapperLazy.java
+        ├── resources
+        │   ├── log4j2.xml
+        │   └── spring
+        │       ├── application-config.xml
+        │       └── mvc-config.xml
+        └── webapp
+            ├── app
+            │   ├── app.js
+            │   ├── components
+            │   │   ├── core
+            │   │   │   └── directives
+            │   │   │       └── directives.js
+            │   │   └── main
+            │   │       ├── controllers
+            │   │       │   └── application.js
+            │   │       └── services
+            │   │           └── application.js
+            │   ├── config.js
+            │   └── routes.js
+            ├── config
+            │   └── config.properties
+            ├── index.html
+            ├── templates
+            │   ├── header.html
+            │   └── main
+            │       └── main.html
+            └── web.xml
+```
 
 ### Contributions are welcome
 

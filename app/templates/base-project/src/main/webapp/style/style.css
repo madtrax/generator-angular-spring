@@ -1,0 +1,8 @@
+body { margin:0;padding:0; }
+
+.callout { background-color: #F4F8FA; margin: 20px 0; padding: 20px; border-left: 3px solid #BCE8F1; }
+.callout h4 { color: #34789A;margin-top: 0;margin-bottom: 5px; }
+
+nav { height: 38px; color: #FFF;  font-size: 14px;  font-weight: 600;  line-height: 39px;  text-align: right;  border-bottom: 1px solid #235D76;  background: #287393;overflow: hidden; }
+nav a { display: inline-block; line-height: 36px; padding: 0 10px; margin: 0;  color: rgba(255, 255, 255, 0.8);  text-decoration: none;  background: #287393;  transition: all 0.1s; font-weight: 300; }
+nav a:hover, nav a:focus { color: #FFF; text-decoration: none; background: #256A88; }

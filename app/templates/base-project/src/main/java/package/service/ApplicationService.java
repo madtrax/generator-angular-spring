@@ -12,7 +12,10 @@ public class ApplicationService {
 	@Value("${project.author}")
 	private String projectAuthor;
 
-	public ApplicationService() {}
+	@Value("${project.website}")
+	private String projectWebsite;
+
+	public ApplicationService() { }
 
 	public String getProjectName() {
 		return projectName;
@@ -20,6 +23,10 @@ public class ApplicationService {
 
 	public String getProjectAuthor() {
 		return projectAuthor;
+	}
+
+	public String getProjectWebsite() {
+		return projectWebsite;
 	}
 
 }

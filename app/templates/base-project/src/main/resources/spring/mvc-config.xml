@@ -13,18 +13,7 @@
 	
 	<context:component-scan base-package="<%= properties.packageName %>" /> 
 
-	
-	<mvc:annotation-driven>
-		<mvc:message-converters>
-			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" lazy-init="true">
-				<property name="objectMapper">
-					 <bean class="<%= properties.packageName %>.utils.JSONObjectMapperLazy" />
-				</property>
-			</bean>
-		</mvc:message-converters>
-	</mvc:annotation-driven>
-	
-	<!-- bean id="userService" class="com.turn.mis.service.MarketInventorySourceService"></bean -->
+	<mvc:annotation-driven />
 
 	<mvc:resources mapping="/**" location="/WEB-INF/" />
 		
@@ -33,9 +22,7 @@
 	        <property name="suffix" value=".html"/>
 	</bean>
 
-
-	<context:property-placeholder ignore-unresolvable="true" ignore-resource-not-found="true" order="1" 
-							location="/WEB-INF/config/config.${config.env:default}.properties" />	
+	<context:property-placeholder ignore-unresolvable="true" ignore-resource-not-found="true" order="1"  location="/WEB-INF/config/config.${config.env:default}.properties" />	
 	<context:property-placeholder location="/WEB-INF/config/config.properties" order="2" local-override="false" />
 
 </beans>
