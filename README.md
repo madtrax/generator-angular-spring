@@ -1,5 +1,4 @@
-# angular-spring generator [![Build Status](https://secure.travis-ci.org/madtrax/generator-angular-spring.png?branch=master)](https://travis-ci.org/madtrax/generator-angular-spring) [![Dependency Status](https://david-dm.org/madtrax/generator-angular-spring
-.svg)]
+# angular-spring generator [![Build Status](https://secure.travis-ci.org/madtrax/generator-angular-spring.png?branch=master)](https://travis-ci.org/madtrax/generator-angular-spring) [![Dependency Status](https://david-dm.org/madtrax/generator-angular-spring.svg)](https://david-dm.org/madtrax/generator-angular-spring.svg)
 
 ## Getting Started
 
@@ -34,11 +33,18 @@ Finally, initiate the generator:
 yo javastar
 ```
 
-### Example of generated application [![Build Status](https://travis-ci.org/madtrax/sample-angular-spring.svg?branch=master)](https://travis-ci.org/madtrax/sample-angular-spring)
+### Generated application [![Build Status](https://travis-ci.org/madtrax/sample-angular-spring.svg?branch=master)](https://travis-ci.org/madtrax/sample-angular-spring)
 
-You can find a sample of generated application [here](https://github.com/madtrax/sample-angular-spring)
+Once you ran the generator, execute the following commands to compile and run the web application.
 
+```bash
+npm install && bower install && grunt && mvn tomcat7:run
+```
+
+Once everything is done you can open you web browser: http://localhost:8080/your-project-name/
 ![Image](https://lh6.googleusercontent.com/RPnKG2R57R7ZQ-Xm0Eo5dj589BMg_j4LC4Pwn8ZZB_cnXyqhmNpmbXTX_gPmhTUqWkUOSkh5vUA=w1499-h798)
+
+You can find a sample of generated application [here](https://github.com/madtrax/sample-angular-spring). 
 
 The application folder structure before running grunt and bower should be:
 
