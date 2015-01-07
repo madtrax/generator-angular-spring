@@ -42,7 +42,8 @@ npm install && bower install && grunt && mvn tomcat7:run
 ```
 
 Once everything is done you can open you web browser: http://localhost:8080/your-project-name/
-![Image](https://lh6.googleusercontent.com/RPnKG2R57R7ZQ-Xm0Eo5dj589BMg_j4LC4Pwn8ZZB_cnXyqhmNpmbXTX_gPmhTUqWkUOSkh5vUA=w1499-h798)
+
+![Image](http://imagizer.imageshack.us/a/img537/8286/EBBZOM.png)
 
 You can find a sample of generated application [here](https://github.com/madtrax/sample-angular-spring). 
 
