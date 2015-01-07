@@ -1,7 +1,5 @@
 'use strict';
 var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
   
@@ -12,9 +10,7 @@ module.exports = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
-    this.log(yosay(
-      'Thank you for using ' + chalk.red('angular-spring') + ' generator!'
-    ));
+    this.log('Thank you for using angular-spring generator!');
 
     var prompts = [
       { type: 'input', name: 'projectName', message: 'What\'s the name of the project?', default: 'MyProject' },
