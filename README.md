@@ -38,7 +38,9 @@ yo javastar
 
 You can find a sample of generated application [here](https://github.com/madtrax/sample-angular-spring)
 
-The application folder structure should be:
+![Image](https://lh6.googleusercontent.com/RPnKG2R57R7ZQ-Xm0Eo5dj589BMg_j4LC4Pwn8ZZB_cnXyqhmNpmbXTX_gPmhTUqWkUOSkh5vUA=w1499-h798)
+
+The application folder structure before running grunt and bower should be:
 
 ```bash
 ├── Gruntfile.js
@@ -54,10 +56,8 @@ The application folder structure should be:
         │           └── myapp
         │               ├── controller
         │               │   └── ApplicationController.java
-        │               ├── service
-        │               │   └── ApplicationService.java
-        │               └── utils
-        │                   └── JSONObjectMapperLazy.java
+        │               └── service
+        │                   └── ApplicationService.java
         ├── resources
         │   ├── log4j2.xml
         │   └── spring
@@ -72,19 +72,23 @@ The application folder structure should be:
             │   │   │       └── directives.js
             │   │   └── main
             │   │       ├── controllers
-            │   │       │   └── application.js
+            │   │       │   └── main.js
             │   │       └── services
-            │   │           └── application.js
+            │   │           └── main.js
             │   ├── config.js
             │   └── routes.js
             ├── config
             │   └── config.properties
             ├── index.html
+            ├── style
+            │   └── style.css
             ├── templates
             │   ├── header.html
             │   └── main
             │       └── main.html
             └── web.xml
+
+22 directories, 22 files
 ```
 
 ### Contributions are welcome
