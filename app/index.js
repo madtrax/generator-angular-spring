@@ -47,7 +47,9 @@ module.exports = yeoman.generators.Base.extend({
       var genericCopyFiles        = ['_Gruntfile.js'];
       var packagePath             = this.properties.packageName.replace(/\./g, '/');
       var javaSrcPath             = baseProjectPath + 'src/main/java/'
+      var javaSrcTestPath         = baseProjectPath + 'src/test/java/'
       var javaPath                = 'src/main/java/' + packagePath + '/';
+      var javaTestPath            = 'src/test/java/' + packagePath + '/';
 
       for (var f in genericTemplateFiles)
         this.template(baseProjectPath + genericTemplateFiles[f], genericTemplateFiles[f].substr(1,500), this, underscoreParams);
@@ -57,8 +59,10 @@ module.exports = yeoman.generators.Base.extend({
 
       this.directory(baseProjectPath + 'src/main/webapp/', 'src/main/webapp/');
       this.directory(baseProjectPath + 'src/main/resources/', 'src/main/resources/');
-      this.directory(baseProjectPath + 'src/test/', 'src/test/');
+      this.directory(baseProjectPath + 'src/test/resources/', 'src/test/resources/');
+
       this.directory(baseProjectPath + 'src/main/java/package/', 'src/main/java/' + packagePath + '/');
+      this.directory(baseProjectPath + 'src/test/java/package/', 'src/test/java/' + packagePath + '/');
 
       this.template(baseProjectPath + 'src/main/webapp/app/app.js', 'src/main/webapp/app/app.js', this, underscoreParams);
       this.template(baseProjectPath + '_web.xml', 'src/main/webapp/web.xml', this, underscoreParams);
@@ -70,6 +74,11 @@ module.exports = yeoman.generators.Base.extend({
 
       this.template(javaSrcPath + 'package/controller/ApplicationController.java', javaPath + 'controller/ApplicationController.java', this, underscoreParams);
       this.template(javaSrcPath + 'package/service/ApplicationService.java', javaPath + 'service/ApplicationService.java', this, underscoreParams);
+
+      this.template(javaSrcTestPath + 'package/controller/ApplicationControllerTest.java', javaTestPath + 'controller/ApplicationControllerTest.java', this, underscoreParams);
+      this.template(javaSrcTestPath + 'package/service/ApplicationServiceTest.java', javaTestPath + 'service/ApplicationServiceTest.java', this, underscoreParams);
+
+      this.template(baseProjectPath + 'src/test/resources/config/config.test.properties', 'src/test/resources/config/config.test.properties', this, underscoreParams);
 
     },
 

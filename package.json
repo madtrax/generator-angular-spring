@@ -2,7 +2,7 @@
   "name": "generator-angular-spring",
   "version": "0.0.2",
   "description": "(Java Spring MVC + AngularJS)/Tomcat Yeoman generator",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "main": "app/index.js",
   "repository": {
     "type": "git",
